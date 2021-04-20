@@ -1,0 +1,136 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap');
+
+/*
+================
+global variables
+================
+*/
+:root {
+  --bckg-colour: #c7ecee;
+  --border-element: #cc8e35;
+  --divider-element:#d1d8e0;
+  --fcolour:#2f3640;
+  --ff-element: 'Baskervville', serif;
+  --fs-title: 2.1rem;
+  --fs-btn: 1.1rem;
+}
+
+
+*, 
+:after,
+:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bckg-colour);
+  font-family: var(--ff-element);
+
+}
+
+main {
+  min-height: 50vh;
+  display: grid;
+  place-items: center;
+}
+
+.title {
+  font-size: var(--fs-title);
+  text-transform: capitalize;
+  font-family: var(--ff-element);
+  font-weight: bold;
+  text-align: center;
+  padding: 3rem 0 2rem;
+}
+
+.underline {
+  width: 70px;
+  margin: 0.5rem auto;
+  border: 2px solid;
+  border-radius: 5px;
+  color: var(--border-element);
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+
+.btn {
+  padding: 0.20rem 1rem;
+  margin-right: 0.75rem;
+  border: 2px groove var(--border-element);
+  border-radius: 5px;
+  text-transform: capitalize;
+  background-color: transparent;
+  font-size: var(--fs-btn);
+  cursor: pointer;
+}
+.btn:hover {
+  color: #fff;
+  background-color: var(--border-element);
+  transition: 0.4s;
+}
+
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+  display: grid;
+  gap: 3rem 2rem;
+  justify-items: center;
+}
+.menu-item {
+  display: grid;
+  gap: 1rem 2rem;
+  max-width: 25rem;
+  margin-top: 10px;
+}
+.photo {
+  object-fit: cover;
+  height: 200px;
+  border: 0.2rem solid var(--border-element);
+  border-radius: 5px;
+}
+.item-info header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.5px solid lightgrey;
+}
+.item-info h4 {
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.price {
+  color: var(--border-element);
+}
+.item-text {
+  margin-bottom: 0;
+  padding-top: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-item {
+    grid-template-columns: 225px 1fr;
+    gap: 0 1.25rem;
+    max-width: 40rem;
+  }
+  .photo {
+    height: 175px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section-center {
+    width: 95vw;
+    grid-template-columns: 1fr 1fr;
+  }
+  .photo {
+    height: 150px;
+  }
+}
+
