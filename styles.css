@@ -23,18 +23,13 @@ global variables
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: var(--bckg-colour);
   font-family: var(--ff-element);
 
-}
-
-main {
-  min-height: 50vh;
-  display: grid;
-  place-items: center;
 }
 
 .title {
@@ -57,12 +52,13 @@ main {
 .buttons {
   display: flex;
   justify-content: center;
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
+  flex-flow: wrap;
 }
 
 .btn {
   padding: 0.20rem 1rem;
-  margin-right: 0.75rem;
+  margin: 0 0.75rem 0.50rem 0;
   border: 2px groove var(--border-element);
   border-radius: 5px;
   text-transform: capitalize;
@@ -77,12 +73,13 @@ main {
 }
 
 .section-center {
-  width: 90vw;
-  margin: 0 auto;
-  max-width: 1170px;
   display: grid;
   gap: 3rem 2rem;
   justify-items: center;
+  margin: 0 auto;
+  width: 90vw;
+  max-width: 1170px;
+  
 }
 .menu-item {
   display: grid;
@@ -92,9 +89,14 @@ main {
 }
 .photo {
   object-fit: cover;
-  height: 200px;
+  margin: 0 auto;
+  height: 150px;
   border: 0.2rem solid var(--border-element);
   border-radius: 5px;
+}
+.photo:hover {
+  transform: scale(1.1);
+  transition: .5s;
 }
 .item-info header {
   display: flex;
