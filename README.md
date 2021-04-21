@@ -23,3 +23,9 @@ Articles and buttons are loaded dynamically in my webpage and it was interrestin
 Filter let me to show each article by his category.
 
 The page is also responsive for any devices
+
+![mobile version](./views/mobile-view.png)
+
+![ipad version](./views/ipad-view.png)
+
+![laptop version](./views/laptop-view.png)
